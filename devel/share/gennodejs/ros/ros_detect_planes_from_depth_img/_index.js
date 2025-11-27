@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/share/gennodejs/ros/ros_detect_planes_from_depth_img/_index.js

@@ -1,0 +1,10 @@
+(cl:in-package drone_pkg-msg)
+(cl:export '(HEADER-VAL
+          HEADER
+          ROW1-VAL
+          ROW1
+          ROW2-VAL
+          ROW2
+          ROW3-VAL
+          ROW3
+))

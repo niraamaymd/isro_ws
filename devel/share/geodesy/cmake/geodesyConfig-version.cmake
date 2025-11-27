@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/geodesy/share/geodesy/cmake/geodesyConfig-version.cmake

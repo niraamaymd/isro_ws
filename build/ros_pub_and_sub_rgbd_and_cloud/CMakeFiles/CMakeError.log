@@ -1,0 +1,65 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/isro/isro_ws/build/ros_pub_and_sub_rgbd_and_cloud/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e6e90/fast && /usr/bin/make  -f CMakeFiles/cmTC_e6e90.dir/build.make CMakeFiles/cmTC_e6e90.dir/build
+make[1]: Entering directory '/home/isro/isro_ws/build/ros_pub_and_sub_rgbd_and_cloud/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6e90.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e6e90.dir/src.c.o -c /home/isro/isro_ws/build/ros_pub_and_sub_rgbd_and_cloud/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e6e90
+/opt/cmake-3.24.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6e90.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_e6e90.dir/src.c.o -o cmTC_e6e90 
+CMakeFiles/cmTC_e6e90.dir/src.c.o: In function `main':
+src.c:(.text+0x48): undefined reference to `pthread_create'
+src.c:(.text+0x50): undefined reference to `pthread_detach'
+src.c:(.text+0x58): undefined reference to `pthread_cancel'
+src.c:(.text+0x64): undefined reference to `pthread_join'
+src.c:(.text+0x74): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e6e90.dir/build.make:98: recipe for target 'cmTC_e6e90' failed
+make[1]: *** [cmTC_e6e90] Error 1
+make[1]: Leaving directory '/home/isro/isro_ws/build/ros_pub_and_sub_rgbd_and_cloud/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_e6e90/fast' failed
+make: *** [cmTC_e6e90/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/isro/isro_ws/build/ros_pub_and_sub_rgbd_and_cloud/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1d574/fast && /usr/bin/make  -f CMakeFiles/cmTC_1d574.dir/build.make CMakeFiles/cmTC_1d574.dir/build
+make[1]: Entering directory '/home/isro/isro_ws/build/ros_pub_and_sub_rgbd_and_cloud/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1d574.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_1d574.dir/CheckFunctionExists.c.o -c /opt/cmake-3.24.2/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1d574
+/opt/cmake-3.24.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d574.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_1d574.dir/CheckFunctionExists.c.o -o cmTC_1d574  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1d574.dir/build.make:98: recipe for target 'cmTC_1d574' failed
+make[1]: *** [cmTC_1d574] Error 1
+make[1]: Leaving directory '/home/isro/isro_ws/build/ros_pub_and_sub_rgbd_and_cloud/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_1d574/fast' failed
+make: *** [cmTC_1d574/fast] Error 2
+
+
+

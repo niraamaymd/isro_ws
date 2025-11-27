@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/uuid_msgs/share/roseus/ros/uuid_msgs/manifest.l

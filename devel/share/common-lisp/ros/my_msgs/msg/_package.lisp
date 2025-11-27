@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/my_msgs/share/common-lisp/ros/my_msgs/msg/_package.lisp

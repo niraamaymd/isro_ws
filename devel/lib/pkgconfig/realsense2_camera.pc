@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/realsense2_camera/lib/pkgconfig/realsense2_camera.pc

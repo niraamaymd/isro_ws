@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/my_msgs/share/gennodejs/ros/my_msgs/_index.js

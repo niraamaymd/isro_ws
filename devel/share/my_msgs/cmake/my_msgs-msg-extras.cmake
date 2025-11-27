@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/my_msgs/share/my_msgs/cmake/my_msgs-msg-extras.cmake

@@ -1,0 +1,71 @@
+#!/usr/bin/env python
+
+import rospy
+import numpy as np
+import cv2
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+from numpy.lib.stride_tricks import as_strided
+
+def rolling_window(a, window_shape):
+    """Create a sliding window view of 2D array a with given window_shape."""
+    shape = (
+        a.shape[0] - window_shape[0] + 1,
+        a.shape[1] - window_shape[1] + 1,
+        window_shape[0],
+        window_shape[1]
+    )
+    strides = a.strides * 2
+    return as_strided(a, shape=shape, strides=strides)
+
+class FlatRegionDetector:
+    def __init__(self):
+        self.bridge = CvBridge()
+        self.sub = rospy.Subscriber(
+            '/camera/depth/image_rect_raw', Image, self.depth_callback, queue_size=1
+        )
+        rospy.loginfo("FlatRegionDetector node started with vectorized processing...")
+
+    def detect_flat_regions(self, depth_image, window_size=10, var_threshold=1000):
+        # Apply median filter to reduce noise
+        median_filtered = cv2.medianBlur(depth_image, 5)
+
+        # Pad to handle borders
+        pad = window_size // 2
+        padded = np.pad(median_filtered, pad, mode='constant', constant_values=0)
+
+        # Create sliding windows
+        windows = rolling_window(padded, (window_size, window_size))
+
+        # Mask out invalid (zero) depths
+        valid_mask = (windows > 0)
+        windows_float = np.where(valid_mask, windows, np.nan)
+
+        # Compute variance ignoring nan (invalid) values
+        window_var = np.nanvar(windows_float, axis=(-2, -1))
+
+        # Find windows with variance below threshold
+        low_var = window_var < var_threshold
+
+        # Map low-variance windows back to image mask
+        mask = np.zeros_like(median_filtered, dtype=np.uint8)
+        mask[pad:-pad, pad:-pad][low_var] = 1  # assign mask in the valid region
+
+        return mask, median_filtered
+
+    def depth_callback(self, msg):
+        try:
+            # Convert ROS Image to OpenCV image (16UC1: depth in mm)
+            depth_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="passthrough")
+            mask, median_filtered = self.detect_flat_regions(depth_image)
+
+            # For display: convert to 8-bit and color
+            depth_display = cv2.normalize(
+                median_filtered, None, 0, 255, cv2.NORM_MINMAX
+            ).astype(np.uint8)
+            color_display = cv2.cvtColor(depth_display, cv2.COLOR_GRAY2BGR)
+
+            # Mark low-variance (flat) regions in green
+            color_display[mask == 1] = [0, 255, 0]
+
+            cv2.imshow("Flat 

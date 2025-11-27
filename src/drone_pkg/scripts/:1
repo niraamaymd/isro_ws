@@ -1,0 +1,81 @@
+import rospy
+
+from std_msgs.msg import String
+from mavros_msgs.msg import State, CommandBool
+
+
+class DroneController(object):
+    def __init__(self):
+        rospy.init_node('drone_controller')
+
+        self.is_connected = False
+        self.is_armed = False
+        self.is_guided = False
+        self.mode = ""
+
+        rospy.Subscriber("/manual_drone_cmds", String, self.manual_cmd_cb)
+        rospy.Subscriber("/mavros/state". State, state_cb) 
+
+    def manual_cmd_cb(self, msg):
+        cmd = msg.data.strip().lower()
+        rospy.loginfo("[MANUAL CMD] Received: '{}'".format(cmd))
+        if cmd == "arm":
+            self.arm_drone()
+        elif cmd == "disarm":
+            self.disarm_drone()
+        elif cmd.startswith("mode"):
+            parts = cmd.split()
+            if len(parts) == 2:
+                self.set_mode(parts[1])
+            else:
+                rospy.logwarn("Usage: 'mode <MODE>'")
+        elif cmd in ("land", "l"):
+            self.land_immediately()
+        else:
+            rospy.logwarn("Unknown manual command: '{}'".format(cmd))
+
+
+    def state_cb(self, msg):
+        self.is_connected = msg.connected
+        self.is_armed = msg.armed
+        self.is_guided = msg.guided
+        self.mode = msg.mode
+
+        print("[{} | {} | {} | {}]".format(
+            "Connected" if self.is_connected else "Disconnected",
+            "Armed" if self.is_armed else "Disarmed",
+            "Guided" if self.is_guided else "Non-Guided",
+            self.mode
+        ))
+
+    def arm_drone(self):
+        rospy.wait_for_service('mavros/cmd/arming')
+        try:
+            arming_client = rospy.ServiceProxy('mavros/cmd/arming', CommandBool)
+            resp = arming_client(True)
+            if resp.success:
+                rospy.loginfo("Arming succeeded.")
+            else:
+                rospy.logerr("Arming failed. (Service call succeeded)")
+        except rospy.ServiceException as e:
+            rospy.logerr("Arming call failed. (err: %s)", e)
+
+    def disarm_drone(self):
+        rospy.wait_for_service('mavros/cmd/arming')
+        try:
+            arming_client = rospy.ServiceProxy('mavros/cmd/arming', CommandBool)
+            resp = arming_client(False)
+            if resp.success:
+                rospy.loginfo("Disarming succeeded.")
+            else:
+                rospy.logerr("Disarming failed. (Service call succeeded)")
+        except rospy.ServiceException as e:
+            rospy.logerr("Disarming call failed. (err: %s)", e)
+
+
+
+
+if __name__ = '__main__':
+    node = DroneController()
+    rospy.spin()
+    # TODO: Add interrupts for safe landing

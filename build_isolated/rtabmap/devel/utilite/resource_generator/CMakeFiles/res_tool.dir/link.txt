@@ -1,0 +1,1 @@
+/usr/bin/c++  -fmessage-length=0  -fopenmp -O3 -DNDEBUG -rdynamic CMakeFiles/res_tool.dir/main.cpp.o -o /home/isro/isro_ws/src/rtabmap/bin/rtabmap-res_tool-0.3.0  -Wl,-rpath,/home/isro/isro_ws/src/rtabmap/bin: /home/isro/isro_ws/src/rtabmap/bin/librtabmap_utilite.so.0.20.9 -lpthread 

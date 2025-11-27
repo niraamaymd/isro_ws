@@ -1,0 +1,8 @@
+prefix=/home/isro/isro_ws/devel/.private/drone_pkg
+
+Name: drone_pkg
+Description: Description of drone_pkg
+Version: 0.0.0
+Cflags: -I/home/isro/isro_ws/devel/.private/drone_pkg/include -I/home/isro/isro_ws/src/drone_pkg/include
+Libs: -L${prefix}/lib -ldrone_pkg
+Requires: geometry_msgs mavros_msgs rospy std_msgs sensor_msgs message_runtime

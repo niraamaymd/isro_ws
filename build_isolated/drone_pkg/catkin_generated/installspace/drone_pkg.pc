@@ -1,0 +1,8 @@
+prefix=/home/isro/isro_ws/install_isolated
+
+Name: drone_pkg
+Description: Description of drone_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

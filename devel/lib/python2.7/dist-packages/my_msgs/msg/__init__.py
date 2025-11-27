@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/my_msgs/lib/python2.7/dist-packages/my_msgs/msg/__init__.py

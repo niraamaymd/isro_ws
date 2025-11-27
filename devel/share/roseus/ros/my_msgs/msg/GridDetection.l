@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/my_msgs/share/roseus/ros/my_msgs/msg/GridDetection.l

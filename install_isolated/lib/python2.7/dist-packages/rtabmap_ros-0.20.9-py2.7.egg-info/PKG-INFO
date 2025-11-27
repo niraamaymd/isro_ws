@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: rtabmap-ros
+Version: 0.20.9
+Summary: RTAB-Map's ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time constraints.
+Home-page: https://github.com/introlab/rtabmap_ros/issues
+Author: Mathieu Labbe
+Maintainer: Mathieu Labbe
+Maintainer-email: matlabbe@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

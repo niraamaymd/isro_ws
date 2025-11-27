@@ -1,0 +1,8 @@
+prefix=/home/isro/isro_ws/devel_isolated/my_msgs
+
+Name: my_msgs
+Description: Description of my_msgs
+Version: 0.0.0
+Cflags: -I/home/isro/isro_ws/devel_isolated/my_msgs/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs

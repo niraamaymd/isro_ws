@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/map_msgs/share/common-lisp/ros/map_msgs/msg/ProjectedMapInfo.lisp

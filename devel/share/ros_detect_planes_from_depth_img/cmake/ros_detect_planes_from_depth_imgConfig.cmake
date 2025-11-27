@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/share/ros_detect_planes_from_depth_img/cmake/ros_detect_planes_from_depth_imgConfig.cmake

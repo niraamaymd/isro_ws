@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/lib/pkgconfig/ros_detect_planes_from_depth_img.pc

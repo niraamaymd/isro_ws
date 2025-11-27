@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/drone_pkg/share/gennodejs/ros/drone_pkg/msg/_index.js

@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/drone_pkg/share/common-lisp/ros/drone_pkg/msg/_package_GridDetection.lisp

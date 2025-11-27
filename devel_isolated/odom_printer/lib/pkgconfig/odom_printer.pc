@@ -1,0 +1,8 @@
+prefix=/home/isro/isro_ws/devel_isolated/odom_printer
+
+Name: odom_printer
+Description: Description of odom_printer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

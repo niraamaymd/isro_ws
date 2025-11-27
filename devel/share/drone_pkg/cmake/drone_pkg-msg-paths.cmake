@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/drone_pkg/share/drone_pkg/cmake/drone_pkg-msg-paths.cmake

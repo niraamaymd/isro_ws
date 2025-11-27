@@ -1,0 +1,1 @@
+/home/isro/isro_ws/devel/.private/drone_pkg/share/roseus/ros/drone_pkg/manifest.l

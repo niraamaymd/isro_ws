@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/isro/isro_ws/devel_isolated/unique_identifier/setup.sh
