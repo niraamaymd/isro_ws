@@ -1,4 +1,0 @@
-README.md
-setup.py
-python/rtabmap_ros/__init__.py
-python/rtabmap_ros/compression.py

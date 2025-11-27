@@ -1,7 +1,0 @@
-mavros/libmavconn
-/home/isro/isro_ws/devel/.private/libmavconn/cmake.lock /home/isro/isro_ws/devel/./cmake.lock
-/home/isro/isro_ws/devel/.private/libmavconn/lib/libmavconn.so /home/isro/isro_ws/devel/lib/libmavconn.so
-/home/isro/isro_ws/devel/.private/libmavconn/lib/pkgconfig/libmavconn.pc /home/isro/isro_ws/devel/lib/pkgconfig/libmavconn.pc
-/home/isro/isro_ws/devel/.private/libmavconn/share/libmavconn/cmake/libmavconnConfig-version.cmake /home/isro/isro_ws/devel/share/libmavconn/cmake/libmavconnConfig-version.cmake
-/home/isro/isro_ws/devel/.private/libmavconn/share/libmavconn/cmake/libmavconnConfig.cmake /home/isro/isro_ws/devel/share/libmavconn/cmake/libmavconnConfig.cmake
-/home/isro/isro_ws/devel/.private/libmavconn/share/libmavconn/cmake/libmavconn-extras.cmake /home/isro/isro_ws/devel/share/libmavconn/cmake/libmavconn-extras.cmake

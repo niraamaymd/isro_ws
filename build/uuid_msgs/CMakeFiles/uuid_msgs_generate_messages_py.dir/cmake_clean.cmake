@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/uuid_msgs_generate_messages_py"
   "/home/isro/isro_ws/devel/.private/uuid_msgs/lib/python2.7/dist-packages/uuid_msgs/msg/_UniqueID.py"
   "/home/isro/isro_ws/devel/.private/uuid_msgs/lib/python2.7/dist-packages/uuid_msgs/msg/__init__.py"
-  "CMakeFiles/uuid_msgs_generate_messages_py"
 )
 
 # Per-language clean rules from dependency scanning.

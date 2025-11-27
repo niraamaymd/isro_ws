@@ -1,8 +1,0 @@
-prefix=/home/isro/isro_ws/devel/.private/move_base_msgs
-
-Name: move_base_msgs
-Description: Description of move_base_msgs
-Version: 1.14.2
-Cflags: -I/home/isro/isro_ws/devel/.private/move_base_msgs/include
-Libs: -L${prefix}/lib 
-Requires: actionlib_msgs geometry_msgs message_runtime

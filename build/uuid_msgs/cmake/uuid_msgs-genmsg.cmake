@@ -2,7 +2,7 @@
 
 message(STATUS "uuid_msgs: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iuuid_msgs:/home/isro/isro_ws/src/unique_identifier/uuid_msgs/msg;-Istd_msgs:/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iuuid_msgs:/home/isro/isro_ws/src/unique_identifier/uuid_msgs/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)

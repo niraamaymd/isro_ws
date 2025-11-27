@@ -1,0 +1,7 @@
+Symlinking /home/isro/isro_ws/devel/lib/libddynamic_reconfigure.so
+Symlinking /home/isro/isro_ws/devel/lib/ddynamic_reconfigure/ddynamic_reconfigure_auto_update_test
+Symlinking /home/isro/isro_ws/devel/lib/ddynamic_reconfigure/fake_dynamic_reconfigure_server
+Symlinking /home/isro/isro_ws/devel/lib/ddynamic_reconfigure/test_bool_dynamic_reconfigure_server
+Symlinking /home/isro/isro_ws/devel/lib/pkgconfig/ddynamic_reconfigure.pc
+Symlinking /home/isro/isro_ws/devel/share/ddynamic_reconfigure/cmake/ddynamic_reconfigureConfig-version.cmake
+Symlinking /home/isro/isro_ws/devel/share/ddynamic_reconfigure/cmake/ddynamic_reconfigureConfig.cmake

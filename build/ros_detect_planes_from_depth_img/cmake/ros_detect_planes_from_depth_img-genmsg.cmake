@@ -2,7 +2,7 @@
 
 message(STATUS "ros_detect_planes_from_depth_img: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iros_detect_planes_from_depth_img:/home/isro/isro_ws/src/ros_detect_planes_from_depth_img/msg;-Igeometry_msgs:/home/isro/ros_catkin_ws/install_isolated/share/geometry_msgs/cmake/../msg;-Istd_msgs:/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iros_detect_planes_from_depth_img:/home/isro/isro_ws/src/ros_detect_planes_from_depth_img/msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)

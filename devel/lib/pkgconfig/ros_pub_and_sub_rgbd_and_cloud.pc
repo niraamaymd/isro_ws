@@ -1,1 +1,0 @@
-/home/isro/isro_ws/devel/.private/ros_pub_and_sub_rgbd_and_cloud/lib/pkgconfig/ros_pub_and_sub_rgbd_and_cloud.pc

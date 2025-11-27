@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/lib;/home/isro/isro_ws/devel_isolated/odom_printer/lib;/home/isro/isro_ws/devel_isolated/rtabmap_ros/lib;/home/isro/isro_ws/install_isolated/lib;/home/isro/isro_ws/devel_isolated/ddynamic_reconfigure/lib;/home/isro/isro_ws/devel/lib;/home/isro/ros_catkin_ws/install_isolated/lib)
+    foreach(path /home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/lib;/home/isro/isro_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

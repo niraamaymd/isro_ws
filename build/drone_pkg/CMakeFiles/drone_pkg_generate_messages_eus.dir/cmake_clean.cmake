@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/drone_pkg/share/roseus/ros/drone_pkg/manifest.l"
-  "/home/isro/isro_ws/devel/.private/drone_pkg/share/roseus/ros/drone_pkg/msg/GridDetection.l"
   "CMakeFiles/drone_pkg_generate_messages_eus"
+  "/home/isro/isro_ws/devel/.private/drone_pkg/share/roseus/ros/drone_pkg/msg/GridDetection.l"
+  "/home/isro/isro_ws/devel/.private/drone_pkg/share/roseus/ros/drone_pkg/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

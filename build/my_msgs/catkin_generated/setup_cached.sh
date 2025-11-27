@@ -8,9 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/isro/isro_ws/devel/.private/my_msgs:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/isro/isro_ws/devel/.private/my_msgs/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/isro/isro_ws/devel/.private/my_msgs/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/isro/isro_ws/build/my_msgs'
-export PYTHONPATH="/home/isro/isro_ws/devel/.private/my_msgs/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/isro/isro_ws/devel/.private/my_msgs/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/isro/isro_ws/src/my_msgs:$ROS_PACKAGE_PATH"

@@ -32,26 +32,28 @@ class VisionPosePublisher:
     def __init__(self):
         rospy.init_node('vision_pose_pub')
         self.pub = rospy.Publisher('/mavros/vision_pose/pose', PoseStamped, queue_size=10)
-        rospy.Subscriber('/rtabmap/odom', Odometry, self.odom_callback)
+        rospy.Subscriber('/rovio/odometry', Odometry, self.odom_callback)
         rospy.loginfo("Vision Pose Publisher Node Started")
 
     def enu_to_ned(self, pose):
         ned_pose = PoseStamped()
         ned_pose.header = pose.header
 
-        # Position transformation
+        # --- Position transformation ---
+        # ENU (x: east, y: north, z: up) -> NED (x: north, y: east, z: down)
         ned_pose.pose.position.x = pose.pose.position.y
         ned_pose.pose.position.y = pose.pose.position.x
         ned_pose.pose.position.z = -pose.pose.position.z
 
-        # Orientation transformation: 180 deg rotation about X axis
+        # --- Orientation transformation ---
+        # Rotate 180 about X axis to convert ENU -> NED
         q_enu = [
             pose.pose.orientation.x,
             pose.pose.orientation.y,
             pose.pose.orientation.z,
             pose.pose.orientation.w
         ]
-        q_rot = quaternion_from_euler(math.pi, 0, 0)  # 180 deg about X
+        q_rot = quaternion_from_euler(math.pi, 0, 0)  # 180 about X
         q_ned = quaternion_multiply(q_rot, q_enu)
         ned_pose.pose.orientation = Quaternion(*q_ned)
 
@@ -63,15 +65,13 @@ class VisionPosePublisher:
             pose_msg.header = msg.header
             pose_msg.pose = msg.pose.pose
 
-            # Transform ENU to NED before publishing
+            # Transform ENU -> NED before publishing
             ned_pose_msg = self.enu_to_ned(pose_msg)
             self.pub.publish(ned_pose_msg)
 
-            rospy.loginfo_once("Publishing vision pose with timestamp: %d.%09d",
-                               ned_pose_msg.header.stamp.secs,
-                               ned_pose_msg.header.stamp.nsecs)
+            rospy.loginfo_once("Publishing vision pose to MAVROS in NED frame")
 
-            rospy.loginfo("NED X: {:.3f}, Y: {:.3f}, Z: {:.3f}".format(
+            rospy.loginfo_throttle(1.0, "NED Position > X: {:.3f}, Y: {:.3f}, Z: {:.3f}".format(
                 ned_pose_msg.pose.position.x,
                 ned_pose_msg.pose.position.y,
                 ned_pose_msg.pose.position.z

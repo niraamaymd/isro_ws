@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/ddynamic_reconfigure/lib/ddynamic_reconfigure/ddynamic_reconfigure_auto_update_test"
-  "/home/isro/isro_ws/devel/.private/ddynamic_reconfigure/lib/ddynamic_reconfigure/ddynamic_reconfigure_auto_update_test.pdb"
   "CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/test/ddynamic_reconfigure_auto_update_test.cpp.o"
-  "CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/test/ddynamic_reconfigure_auto_update_test.cpp.o.d"
+  "/home/isro/isro_ws/devel/.private/ddynamic_reconfigure/lib/ddynamic_reconfigure/ddynamic_reconfigure_auto_update_test.pdb"
+  "/home/isro/isro_ws/devel/.private/ddynamic_reconfigure/lib/ddynamic_reconfigure/ddynamic_reconfigure_auto_update_test"
 )
 
 # Per-language clean rules from dependency scanning.

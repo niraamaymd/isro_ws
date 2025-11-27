@@ -1,1 +1,0 @@
-/home/isro/isro_ws/devel/.private/geographic_msgs/include/geographic_msgs/GetGeographicMap.h

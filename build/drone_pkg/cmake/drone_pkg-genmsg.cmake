@@ -2,7 +2,7 @@
 
 message(STATUS "drone_pkg: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Idrone_pkg:/home/isro/isro_ws/src/drone_pkg/msg;-Istd_msgs:/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Idrone_pkg:/home/isro/isro_ws/src/drone_pkg/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -31,7 +31,7 @@ add_custom_target(_drone_pkg_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(drone_pkg
   "/home/isro/isro_ws/src/drone_pkg/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/drone_pkg
 )
 
@@ -64,7 +64,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS drone_pkg_generate_messages_cpp)
 _generate_msg_eus(drone_pkg
   "/home/isro/isro_ws/src/drone_pkg/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/drone_pkg
 )
 
@@ -97,7 +97,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS drone_pkg_generate_messages_eus)
 _generate_msg_lisp(drone_pkg
   "/home/isro/isro_ws/src/drone_pkg/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/drone_pkg
 )
 
@@ -130,7 +130,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS drone_pkg_generate_messages_lisp)
 _generate_msg_nodejs(drone_pkg
   "/home/isro/isro_ws/src/drone_pkg/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/drone_pkg
 )
 
@@ -163,7 +163,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS drone_pkg_generate_messages_nodejs)
 _generate_msg_py(drone_pkg
   "/home/isro/isro_ws/src/drone_pkg/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/drone_pkg
 )
 

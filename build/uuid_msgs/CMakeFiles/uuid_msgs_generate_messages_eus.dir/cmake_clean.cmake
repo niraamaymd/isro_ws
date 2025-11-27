@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/uuid_msgs/share/roseus/ros/uuid_msgs/manifest.l"
-  "/home/isro/isro_ws/devel/.private/uuid_msgs/share/roseus/ros/uuid_msgs/msg/UniqueID.l"
   "CMakeFiles/uuid_msgs_generate_messages_eus"
+  "/home/isro/isro_ws/devel/.private/uuid_msgs/share/roseus/ros/uuid_msgs/msg/UniqueID.l"
+  "/home/isro/isro_ws/devel/.private/uuid_msgs/share/roseus/ros/uuid_msgs/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

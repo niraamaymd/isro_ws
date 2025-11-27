@@ -6,13 +6,13 @@ import stat
 import sys
 
 # find the import for catkin's python package - either from source space or from an installed underlay
-if os.path.exists(os.path.join('/home/isro/ros_catkin_ws/install_isolated/share/catkin/cmake', 'catkinConfig.cmake.in')):
-    sys.path.insert(0, os.path.join('/home/isro/ros_catkin_ws/install_isolated/share/catkin/cmake', '..', 'python'))
+if os.path.exists(os.path.join('/opt/ros/melodic/share/catkin/cmake', 'catkinConfig.cmake.in')):
+    sys.path.insert(0, os.path.join('/opt/ros/melodic/share/catkin/cmake', '..', 'python'))
 try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in '/home/isro/isro_ws/devel_isolated/odom_printer;/home/isro/isro_ws/devel_isolated/rtabmap_ros;/home/isro/isro_ws/install_isolated;/home/isro/isro_ws/devel_isolated/ddynamic_reconfigure;/home/isro/isro_ws/devel;/home/isro/ros_catkin_ws/install_isolated'.split(';'):
+    for workspace in '/home/isro/isro_ws/devel;/opt/ros/melodic'.split(';'):
         python_path = os.path.join(workspace, 'lib/python2.7/dist-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)

@@ -1,1 +1,0 @@
-/home/isro/isro_ws/devel/.private/geodesy/lib/python2.7/dist-packages/geodesy/__init__.py

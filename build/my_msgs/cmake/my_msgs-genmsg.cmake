@@ -2,7 +2,7 @@
 
 message(STATUS "my_msgs: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Imy_msgs:/home/isro/isro_ws/src/my_msgs/msg;-Istd_msgs:/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Imy_msgs:/home/isro/isro_ws/src/my_msgs/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -31,7 +31,7 @@ add_custom_target(_my_msgs_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(my_msgs
   "/home/isro/isro_ws/src/my_msgs/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/my_msgs
 )
 
@@ -64,7 +64,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS my_msgs_generate_messages_cpp)
 _generate_msg_eus(my_msgs
   "/home/isro/isro_ws/src/my_msgs/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/my_msgs
 )
 
@@ -97,7 +97,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS my_msgs_generate_messages_eus)
 _generate_msg_lisp(my_msgs
   "/home/isro/isro_ws/src/my_msgs/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/my_msgs
 )
 
@@ -130,7 +130,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS my_msgs_generate_messages_lisp)
 _generate_msg_nodejs(my_msgs
   "/home/isro/isro_ws/src/my_msgs/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/my_msgs
 )
 
@@ -163,7 +163,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS my_msgs_generate_messages_nodejs)
 _generate_msg_py(my_msgs
   "/home/isro/isro_ws/src/my_msgs/msg/GridDetection.msg"
   "${MSG_I_FLAGS}"
-  "/home/isro/ros_catkin_ws/install_isolated/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/my_msgs
 )
 

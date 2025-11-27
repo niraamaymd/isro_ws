@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/my_msgs/share/common-lisp/ros/my_msgs/msg/GridDetection.lisp"
   "CMakeFiles/my_msgs_generate_messages_lisp"
+  "/home/isro/isro_ws/devel/.private/my_msgs/share/common-lisp/ros/my_msgs/msg/GridDetection.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

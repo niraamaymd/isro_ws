@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/uuid_msgs/share/gennodejs/ros/uuid_msgs/msg/UniqueID.js"
   "CMakeFiles/uuid_msgs_generate_messages_nodejs"
+  "/home/isro/isro_ws/devel/.private/uuid_msgs/share/gennodejs/ros/uuid_msgs/msg/UniqueID.js"
 )
 
 # Per-language clean rules from dependency scanning.

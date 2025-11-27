@@ -8,9 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/isro/isro_ws/devel/.private/drone_pkg:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/isro/isro_ws/devel/.private/drone_pkg/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/isro/isro_ws/devel/.private/drone_pkg/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/isro/isro_ws/build/drone_pkg'
-export PYTHONPATH="/home/isro/isro_ws/devel/.private/drone_pkg/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/isro/isro_ws/devel/.private/drone_pkg/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/isro/isro_ws/src/drone_pkg:$ROS_PACKAGE_PATH"

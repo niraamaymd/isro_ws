@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/my_msgs/share/gennodejs/ros/my_msgs/msg/GridDetection.js"
   "CMakeFiles/my_msgs_generate_messages_nodejs"
+  "/home/isro/isro_ws/devel/.private/my_msgs/share/gennodejs/ros/my_msgs/msg/GridDetection.js"
 )
 
 # Per-language clean rules from dependency scanning.

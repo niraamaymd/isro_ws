@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/drone_pkg/include/drone_pkg/GridDetection.h"
   "CMakeFiles/drone_pkg_generate_messages_cpp"
+  "/home/isro/isro_ws/devel/.private/drone_pkg/include/drone_pkg/GridDetection.h"
 )
 
 # Per-language clean rules from dependency scanning.

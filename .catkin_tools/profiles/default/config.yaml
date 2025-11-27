@@ -1,4 +1,4 @@
-blacklist:
+blacklist: []
 build_space: build
 catkin_make_args: []
 cmake_args: []
@@ -14,4 +14,4 @@ make_args: []
 source_space: src
 use_env_cache: false
 use_internal_make_jobserver: true
-whitelist:
+whitelist: []

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/share/common-lisp/ros/ros_detect_planes_from_depth_img/msg/PlanesResults.lisp"
   "CMakeFiles/ros_detect_planes_from_depth_img_generate_messages_lisp"
+  "/home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/share/common-lisp/ros/ros_detect_planes_from_depth_img/msg/PlanesResults.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

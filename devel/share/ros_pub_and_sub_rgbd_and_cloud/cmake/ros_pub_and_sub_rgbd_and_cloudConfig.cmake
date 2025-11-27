@@ -1,1 +1,0 @@
-/home/isro/isro_ws/devel/.private/ros_pub_and_sub_rgbd_and_cloud/share/ros_pub_and_sub_rgbd_and_cloud/cmake/ros_pub_and_sub_rgbd_and_cloudConfig.cmake

@@ -1,1 +1,0 @@
-/home/isro/isro_ws/devel/.private/rtabmap_ros/share/roseus/ros/rtabmap_ros/manifest.l

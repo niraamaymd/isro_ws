@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/home/isro/isro_ws/devel_isolated/odom_printer;/home/isro/isro_ws/devel_isolated/rtabmap_ros;/home/isro/isro_ws/install_isolated;/home/isro/isro_ws/devel_isolated/ddynamic_reconfigure;/home/isro/isro_ws/devel;/home/isro/ros_catkin_ws/install_isolated'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/isro/isro_ws/devel;/opt/ros/melodic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

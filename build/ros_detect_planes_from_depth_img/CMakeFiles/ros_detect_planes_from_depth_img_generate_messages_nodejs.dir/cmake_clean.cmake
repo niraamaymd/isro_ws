@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/share/gennodejs/ros/ros_detect_planes_from_depth_img/msg/PlanesResults.js"
   "CMakeFiles/ros_detect_planes_from_depth_img_generate_messages_nodejs"
+  "/home/isro/isro_ws/devel/.private/ros_detect_planes_from_depth_img/share/gennodejs/ros/ros_detect_planes_from_depth_img/msg/PlanesResults.js"
 )
 
 # Per-language clean rules from dependency scanning.
